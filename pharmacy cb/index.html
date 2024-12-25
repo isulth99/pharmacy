@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Online Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Getz Pharmacy</h1>
+        <p>Browse products by category</p>
+    </header>
+
+    <main>
+       <!-- Analgesics Section -->
+       <section class="product-category">
+        <h2 class="category-title">ANALGESICS</h2>
+        <div class="product-grid">
+            <!-- First 3 Products -->
+            <div class="product-card">
+                <img src="images/1.jpg" alt="Paracetamol">
+                <h3 class="product-name">Paracetamol 500mg</h3>
+                <p class="product-price">LKR 12.74</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Paracetamol', 12.74, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/2.jpg" alt="Ibuprofen">
+                <h3 class="product-name">Ibuprofen 200mg</h3>
+                <p class="product-price">LKR 4.48</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Ibuprofen', 4.48, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/4.jpg" alt="Aspirin">
+                <h3 class="product-name">Aspirin 100mg</h3>
+                <p class="product-price">LKR 6.30</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Aspirin', 6.30, this)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-grid hidden-products">
+            <!-- Next 3 Products -->
+            <div class="product-card">
+                <img src="images/3.jpg" alt="Codeine">
+                <h3 class="product-name">Codeine 30mg</h3>
+                <p class="product-price">LKR 10.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Codeine', 10.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/5.jpg" alt="Diclofenac">
+                <h3 class="product-name">Diclofenac 75mg</h3>
+                <p class="product-price">LKR 8.20</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Diclofenac', 8.20, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/6.jpg" alt="Ketorolac">
+                <h3 class="product-name">Ketorolac 10mg</h3>
+                <p class="product-price">LKR 7.50</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Ketorolac', 7.50, this)">Add to Cart</button>
+            </div>
+        </div>
+        <button class="view-more-btn" onclick="toggleProducts(this)">View More</button>
+    </section>
+
+    <!-- Antibiotics Section -->
+    <section class="product-category">
+        <h2 class="category-title">ANTIBIOTICS</h2>
+        <div class="product-grid">
+            <!-- First 3 Products -->
+            <div class="product-card">
+                <img src="images/7.jpg" alt="Amoxicillin">
+                <h3 class="product-name">Amoxicillin 500mg</h3>
+                <p class="product-price">LKR 15.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Amoxicillin', 15.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/8.jpg" alt="Ciprofloxacin">
+                <h3 class="product-name">Ciprofloxacin 250mg</h3>
+                <p class="product-price">LKR 18.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Ciprofloxacin', 18.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/9.jpg" alt="Doxycycline">
+                <h3 class="product-name">Doxycycline 100mg</h3>
+                <p class="product-price">LKR 22.50</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Doxycycline', 22.50, this)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-grid hidden-products">
+            <!-- Next 3 Products -->
+            <div class="product-card">
+                <img src="images/10.jpg" alt="Azithromycin">
+                <h3 class="product-name">Azithromycin 500mg</h3>
+                <p class="product-price">LKR 25.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Azithromycin', 25.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/11.jpg" alt="Metronidazole">
+                <h3 class="product-name">Metronidazole 400mg</h3>
+                <p class="product-price">LKR 10.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Metronidazole', 10.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/12.jpg" alt="Clarithromycin">
+                <h3 class="product-name">Clarithromycin 250mg</h3>
+                <p class="product-price">LKR 20.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Clarithromycin', 20.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <button class="view-more-btn" onclick="toggleProducts(this)">View More</button>
+    </section>
+
+    <!-- Antidepressants Section -->
+    <section class="product-category">
+        <h2 class="category-title">ANTIDEPRESSANTS</h2>
+        <div class="product-grid">
+            <!-- First 3 Products -->
+            <div class="product-card">
+                <img src="images/13.jpg" alt="Fluoxetine">
+                <h3 class="product-name">Fluoxetine 20mg</h3>
+                <p class="product-price">LKR 12.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Fluoxetine', 12.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/14.jpg" alt="Sertraline">
+                <h3 class="product-name">Sertraline 50mg</h3>
+                <p class="product-price">LKR 14.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Sertraline', 14.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/15.jpg" alt="Citalopram">
+                <h3 class="product-name">Citalopram 10mg</h3>
+                <p class="product-price">LKR 10.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Citalopram', 10.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-grid hidden-products">
+            <!-- Next 3 Products -->
+            <div class="product-card">
+                <img src="images/16.jpg" alt="Escitalopram">
+                <h3 class="product-name">Escitalopram 5mg</h3>
+                <p class="product-price">LKR 13.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Escitalopram', 13.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/17.jpg" alt="Duloxetine">
+                <h3 class="product-name">Duloxetine 30mg</h3>
+                <p class="product-price">LKR 15.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Duloxetine', 15.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/18.jpg" alt="Amitriptyline">
+                <h3 class="product-name">Amitriptyline 25mg</h3>
+                <p class="product-price">LKR 8.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Amitriptyline', 8.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <button class="view-more-btn" onclick="toggleProducts(this)">View More</button>
+    </section>
+
+    <!-- Antihistamines Section -->
+    <section class="product-category">
+        <h2 class="category-title">ANTIHISTAMINES</h2>
+        <div class="product-grid">
+            <!-- First 3 Products -->
+            <div class="product-card">
+                <img src="images/19.jpg" alt="Loratadine">
+                <h3 class="product-name">Loratadine 10mg</h3>
+                <p class="product-price">LKR 5.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Loratadine', 5.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/20.jpg" alt="Cetirizine">
+                <h3 class="product-name">Cetirizine 10mg</h3>
+                <p class="product-price">LKR 6.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Cetirizine', 6.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/21.jpg" alt="Fexofenadine">
+                <h3 class="product-name">Fexofenadine 120mg</h3>
+                <p class="product-price">LKR 7.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Fexofenadine', 7.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-grid hidden-products">
+            <!-- Additional Product -->
+            <div class="product-card">
+                <img src="images/22.jpg" alt="Diphenhydramine">
+                <h3 class="product-name">Diphenhydramine 25mg</h3>
+                <p class="product-price">LKR 4.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Diphenhydramine', 4.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <button class="view-more-btn" onclick="toggleProducts(this)">View More</button>
+    </section>
+
+    <!-- Antihypertensives Section -->
+    <section class="product-category">
+        <h2 class="category-title">ANTIHYPERTENSIVES</h2>
+        <div class="product-grid">
+            <!-- First 3 Products -->
+            <div class="product-card">
+                <img src="images/23.jpg" alt="Amlodipine">
+                <h3 class="product-name">Amlodipine 5mg</h3>
+                <p class="product-price">LKR 10.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Amlodipine', 10.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/24.jpg" alt="Enalapril">
+                <h3 class="product-name">Enalapril 5mg</h3>
+                <p class="product-price">LKR 12.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Enalapril', 12.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/25.jpg" alt="Losartan">
+                <h3 class="product-name">Losartan 50mg</h3>
+                <p class="product-price">LKR 8.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Losartan', 8.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-grid hidden-products">
+            <!-- Next 3 Products -->
+            <div class="product-card">
+                <img src="images/26.jpg" alt="Valsartan">
+                <h3 class="product-name">Valsartan 80mg</h3>
+                <p class="product-price">LKR 15.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Valsartan', 15.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images//27.jpg" alt="Metoprolol">
+                <h3 class="product-name">Metoprolol 50mg</h3>
+                <p class="product-price">LKR 9.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Metoprolol', 9.00, this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/28.jpg" alt="Atenolol">
+                <h3 class="product-name">Atenolol 50mg</h3>
+                <p class="product-price">LKR 7.00</p>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="add-to-cart" onclick="addToCart('Atenolol', 7.00, this)">Add to Cart</button>
+            </div>
+        </div>
+        <button class="view-more-btn" onclick="toggleProducts(this)">View More</button>
+    </section>
+</main>
+        <section id="cart">
+            
+            <table class="cart-table" id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Your cart is empty.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align: right;"><strong>Grand Total:</strong></td>
+                        <td id="grandTotal">LKR 0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+    <button id="saveFavorite">Save as Favorite</button>
+    <button id="applyFavorite">Apply Favorite</button>
+    <button id="buyNow">Buy Now</button>
+
+    </main>
+</body>
+</html>
